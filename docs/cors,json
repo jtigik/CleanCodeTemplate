@@ -1,0 +1,74 @@
+{
+    "project": "CleanCodeTemplate",
+    "description": "Estrutura recomendada e configuração CORS para projeto web JavaScript",
+    "structure": {
+        "root": [
+            "package.json",
+            "README.md",
+            ".gitignore",
+            "src/",
+            "public/",
+            "dist/",
+            "docs/"
+        ],
+        "src": [
+            "index.js",
+            "app/",
+            "components/",
+            "routes/",
+            "services/",
+            "styles/"
+        ],
+        "public": [
+            "index.html",
+            "favicon.ico",
+            "assets/"
+        ],
+        "docs": [
+            "cors.json",
+            "architecture.md",
+            "api.md"
+        ]
+    },
+    "cors": {
+        "development": {
+            "allowedOrigins": [
+                "http://localhost:3000",
+                "http://127.0.0.1:3000"
+            ],
+            "allowedMethods": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "OPTIONS"
+            ],
+            "allowedHeaders": [
+                "Content-Type",
+                "Authorization",
+                "X-Requested-With"
+            ],
+            "allowCredentials": true,
+            "maxAge": 86400
+        },
+        "production": {
+            "allowedOrigins": [
+                "https://seu-dominio.com"
+            ],
+            "allowedMethods": [
+                "GET",
+                "POST",
+                "OPTIONS"
+            ],
+            "allowedHeaders": [
+                "Content-Type",
+                "Authorization"
+            ],
+            "allowCredentials": false,
+            "maxAge": 3600
+        },
+        "express_example": "const cors = require('cors');\napp.use(cors({ origin: ['http://localhost:3000'], credentials: true }));"
+    },
+    "notes": "Ajuste allowedOrigins para os domínios reais. Para APIs públicas considere restringir métodos e cabeçalhos em produção."
+}

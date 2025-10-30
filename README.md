@@ -35,7 +35,7 @@ Este template é **plug-and-play** e suporta **múltiplas linguagens** e **frame
 │   └── 📁 assets          # Ícones e CSS
 ├── 📁 src                 # Código fonte (Clean Architecture)
 │   └── 📁 models          # Entidades & Use Cases
-└──  📁 test                # Testes completos
+└──  📁 test               # Testes completos
 ```
 
 ## 🚀 **Como Usar (5 minutos)**
